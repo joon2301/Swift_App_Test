@@ -97,6 +97,11 @@
                                 <items>
                                     <navigationItem title="Todo-List" id="Hs6-NP-5ZM">
                                         <barButtonItem key="leftBarButtonItem" title="sideMenuButton" image="line.3.horizontal" catalog="system" id="ain-jR-p9I"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Bd9-mW-sQC">
+                                            <connections>
+                                                <segue destination="Qsi-0A-p5l" kind="presentation" id="Wuj-NW-bpT"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -105,26 +110,45 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pWo-sK-3OK">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pWo-sK-3OK">
+                                <rect key="frame" x="0.0" y="154" width="414" height="708"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BI5-Qc-wPg">
+                                <rect key="frame" x="20" y="103" width="304" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eO4-ai-UuK" userLabel="Search Button">
+                                <rect key="frame" x="339" y="103" width="67" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="magnifyingglass" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PhW-r7-o1x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="eO4-ai-UuK" firstAttribute="leading" secondItem="BI5-Qc-wPg" secondAttribute="trailing" constant="20" id="3wh-iQ-gaM"/>
                             <constraint firstItem="2TN-tq-jCs" firstAttribute="width" secondItem="PhW-r7-o1x" secondAttribute="width" id="6uf-O1-P2a"/>
-                            <constraint firstItem="pWo-sK-3OK" firstAttribute="top" secondItem="2TN-tq-jCs" secondAttribute="bottom" id="BMO-Oh-CBx"/>
+                            <constraint firstItem="BI5-Qc-wPg" firstAttribute="leading" secondItem="PhW-r7-o1x" secondAttribute="leading" constant="20" id="CKR-0r-oVq"/>
+                            <constraint firstItem="BI5-Qc-wPg" firstAttribute="top" secondItem="2TN-tq-jCs" secondAttribute="bottom" constant="20" id="M4D-gs-5KV"/>
                             <constraint firstItem="2TN-tq-jCs" firstAttribute="leading" secondItem="PhW-r7-o1x" secondAttribute="leading" id="MUb-AQ-j3V"/>
                             <constraint firstItem="pWo-sK-3OK" firstAttribute="width" secondItem="PhW-r7-o1x" secondAttribute="width" id="Sos-ix-6JH"/>
+                            <constraint firstItem="BI5-Qc-wPg" firstAttribute="top" secondItem="eO4-ai-UuK" secondAttribute="bottom" constant="-31" id="TRX-xY-Z9X"/>
                             <constraint firstItem="PhW-r7-o1x" firstAttribute="trailing" secondItem="pWo-sK-3OK" secondAttribute="trailing" id="Xrh-CE-AQF"/>
                             <constraint firstItem="PhW-r7-o1x" firstAttribute="bottom" secondItem="pWo-sK-3OK" secondAttribute="bottom" id="Y4x-Fm-eCI"/>
+                            <constraint firstItem="pWo-sK-3OK" firstAttribute="top" secondItem="eO4-ai-UuK" secondAttribute="bottom" constant="15" id="ZxR-Rq-y4y"/>
                             <constraint firstItem="pWo-sK-3OK" firstAttribute="leading" secondItem="PhW-r7-o1x" secondAttribute="leading" id="akL-hG-LG0"/>
+                            <constraint firstItem="eO4-ai-UuK" firstAttribute="top" secondItem="2TN-tq-jCs" secondAttribute="bottom" constant="20" id="eNt-Lt-rFz"/>
+                            <constraint firstItem="PhW-r7-o1x" firstAttribute="trailing" secondItem="BI5-Qc-wPg" secondAttribute="trailing" constant="90" id="gWF-wd-10s"/>
+                            <constraint firstItem="pWo-sK-3OK" firstAttribute="top" secondItem="BI5-Qc-wPg" secondAttribute="bottom" constant="15" id="gjP-xZ-M8l"/>
                             <constraint firstItem="2TN-tq-jCs" firstAttribute="top" secondItem="PhW-r7-o1x" secondAttribute="top" id="k12-J0-Wlj"/>
                             <constraint firstItem="PhW-r7-o1x" firstAttribute="trailing" secondItem="2TN-tq-jCs" secondAttribute="trailing" id="slz-bn-99x"/>
+                            <constraint firstItem="PhW-r7-o1x" firstAttribute="trailing" secondItem="eO4-ai-UuK" secondAttribute="trailing" constant="20" id="xWS-zp-63e"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="BI5-Qc-wPg" id="mdo-9a-9dq"/>
                         <outlet property="sideMenuButton" destination="ain-jR-p9I" id="xgI-En-bEN"/>
                     </connections>
                 </viewController>
@@ -137,7 +161,7 @@
             <objects>
                 <viewController storyboardIdentifier="AddListID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qsi-0A-p5l" customClass="AddListViewController" customModule="firebaseTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zTa-Sd-p4q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ivW-qd-GFz">
@@ -145,14 +169,33 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="할일 추가" id="zkE-gy-f8L">
-                                        <barButtonItem key="leftBarButtonItem" title="취소" id="PST-AV-M9R"/>
+                                        <barButtonItem key="leftBarButtonItem" title="취소" id="PST-AV-M9R">
+                                            <connections>
+                                                <action selector="returnButton:" destination="Qsi-0A-p5l" id="dTJ-pZ-VWg"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="awb-c3-yoU">
+                                <rect key="frame" x="159" y="225" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CUP-vh-NY5">
+                                <rect key="frame" x="159" y="291" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lFW-Lq-Xrj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="returnButton" destination="PST-AV-M9R" id="FXw-hc-e7x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EbX-vd-OOm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,6 +313,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="n9c-x0-G5M"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="navBar" destination="nGD-ff-y0X" id="ate-o4-eRU"/>
@@ -303,7 +347,7 @@
                                     <constraint firstAttribute="height" constant="34" id="rea-KL-Amf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yW-GQ-NE6">
                                 <rect key="frame" x="189" y="502" width="60" height="31"/>
@@ -443,6 +487,8 @@
     </scenes>
     <resources>
         <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -451,6 +497,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

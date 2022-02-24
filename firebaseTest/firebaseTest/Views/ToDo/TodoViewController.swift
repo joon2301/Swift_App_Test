@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class TodoViewController: UIViewController {
-    @IBOutlet var sideMenuButton: UIBarButtonItem!
-    //@IBOutlet var addListButton: UIBarButtonItem!
+    @IBOutlet weak var sideMenuButton: UIBarButtonItem!
+    @IBOutlet weak var searchBar: UITextField!
+    
+    var db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
