@@ -1,4 +1,4 @@
-# Swift로 만들어보는 적당한 App
+# Swift로 만들어보는 적당한 App test
 ---
 ### 1. Firebase를 사용한 Authentication 구현
 |로그인|회원가입|
