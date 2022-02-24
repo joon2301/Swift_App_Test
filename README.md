@@ -14,3 +14,4 @@
 
 
 ### 3. Storyboard를 사용하여 View flow 작성
+<img src="https://user-images.githubusercontent.com/68410822/155472932-626c1420-6710-4048-918a-589e716739f0.png" width="600" height="700"/>
